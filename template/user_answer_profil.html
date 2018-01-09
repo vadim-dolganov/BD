@@ -1,0 +1,29 @@
+<div>
+  <div id="content">
+  <p class="count-user">Количество решенных задач: {$countAnswer}</p>
+ {section name=i loop=$userAnswer|@count} 
+  <div class="min_task" style="width: 70%; margin: 0 auto;">        
+    <div class="text_task" style="margin-left: 0; margin-bottom:20px;">          
+      <div>           
+        <a href="/task.php?id={$userAnswer[i].task_id}">             
+          <span class="autor">Ссылка на задачу</span>           
+        </a>          
+        <span class="date joint_item fl_right date">{$userAnswer[i].date}</span>          
+      </div>          
+      <p>{$userAnswer[i].answer_text}</p>
+      {if $userAnswer[i].image}              
+        <a href="/upload/answer/{$userAnswer[i].image}">
+          <img src="/upload/answer/{$userAnswer[i].image}" style="max-width: 20%; max-height:500px; margin-top: 5px;" alt="Решение пользователя">
+        </a><br>  
+      {/if}        
+      <span class="joint_item">{$userAnswer[i].item}</span>          
+      <span class="joint_item">{$userAnswer[i].class} класс</span>
+    </div>     
+  </div>
+ {/section} 
+</div>
+   <div id="load">
+   <div>Загрузить еще</div>
+     <img src="../img/loading.gif" id="imgLoad" alt="загрузка">
+ </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="user_profil">            
+  <div  class="user_img fl_left">              
+    <img  src="/upload/avatar/{$user.avatar}">              
+  </div>            
+  <div style="float: left; width: 33%;">              
+    <h1 style="text-align: left;margin-bottom: 15px;">{$user.name} {$user.last_name}</h1>
+    <form enctype="multipart/form-data" method="post" action="../handler/edit_profile.php">
+      <input type="file" id="settingsform-avatar" name="SettingsAvatar" value="{$user.avatar}">
+      <input type="text" value="{$user.name}" class="settingName" name="name">
+      <input type="text" value="{$user.last_name}" class="settingLastName" name="lastname">
+      <input type="submit" value="Отправить" class="buttonOnClick">  
+    </form>
+  </div>              
+  <div style="clear:both"></div>           
+   
+</div> 

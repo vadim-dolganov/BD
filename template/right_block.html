@@ -1,0 +1,66 @@
+<div class="right_block_content">
+  <div class="add-task-btn">
+    <a href="/addquestion">
+      <div class="button1 icon01-add-ask">Задать свой вопрос</div>
+    </a>
+  </div>
+  
+  <div class="subject">
+    <div class="title_block">
+      <h3>Предметы</h3>
+    </div>      
+      <div>  
+        <ul>  
+          {section name = i loop = $subject|@count}
+            <li>
+              <div class="subject_item">
+                <a href="/subject/{$subject[i].item}/1">
+                  <span>{$subject[i].item}</span>
+                </a>
+              </div>
+            </li> 
+          {/section}
+        </ul>
+      </div>   
+  </div>
+  
+  <!--<div class="subject">
+    <div class="title_block">
+      <h3>ЕГЭ</h3>
+    </div>      
+      <div>  
+        <ul>  
+         
+            <li>
+              <div class="subject_item">
+                <a href="http://reshuvsem.ru/composition/arguments.php">
+                  <span>Аргументы к сочинению</span>
+                </a>
+              </div>
+            </li> 
+     
+        </ul>
+      </div>   
+  </div>-->
+  
+  <div class="lasts_question">
+    <div class="title_block">
+      <h3>Последние ответы</h3>
+    </div>
+    {section name = i loop = $arrayLastTask|@count}   
+      <div>
+        <a href="/task.php?id={$arrayLastTask[i].task_id}">
+          <p class="last_text_question">{$arrayLastTask[i].answer_text}</p>
+        </a>
+        <ul>
+          <li>
+            <span>{$arrayLastTask[i].item}</span>
+          </li>
+        </ul>
+      </div>
+    {/section}   
+  </div>
+
+</div>
+<div style="clear: both;"></div>
+ </div> 

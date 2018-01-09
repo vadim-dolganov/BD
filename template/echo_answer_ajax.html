@@ -1,0 +1,16 @@
+<div class="answer_item">
+  <div style="float: left; margin-right: 15px;">
+  <a href="" style="display: inline-block;">                 
+    <img class="img-avatar" src="../upload/avatar/{$smarty.session.user.photo_big}">               
+    </a><br>                
+    <span class="autor" style="display: block;text-align: center;">{$smarty.session.user.first_name}</span>               
+  </div>              
+  <p style="white-space: pre-wrap;font-family: Hel-Light;display: inline; float: left; color: #666;margin: 0;">{$text}</p><br>
+  {if $image}
+    <a href="/upload/answer/{$image}">
+      <img src="/upload/answer/{$image}" style="max-width:380px; max-height:500px; margin-top: 15px;">
+    </a>  
+  {/if}
+  <div style="clear: both"></div>  
+  <div style="background-color: #40a5ed; height: 1px; margin-top: 10px"></div>
+</div>                    

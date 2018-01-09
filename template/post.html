@@ -1,0 +1,24 @@
+<div class="content">   
+  <div class="left_block_content">
+    <div>
+      <h1 style="font-size: 19px;">{$substr_task}...</h1>
+      {include file='share.html'}
+      <img class="avatar img-avatar" src="/upload/avatar/{$post.avatar}" alt="Автор">
+      <div class="text_task"> 
+        <div style="margin-bottom: 12px;">
+          <a href="/id{$post.user_id}">
+            <span class="autor">{$post.name}</span>
+          </a>
+          <span class="date joint_item fl_right">{$date}</span>
+        </div>
+        <i class="pointer"></i>
+        <b style="font-family: Hel-Light; color: #666;">Условие:</b>
+        <p>{$post.task_text}</p><br>
+        {if $post.image }
+        <a href="/upload/question/{$post.image}" class="link_image"><img src="/upload/question/{$post.image}" class="attach_image_task"></a><br>
+        {/if}
+        <span class="joint_item">{$post.item}</span>
+        <span class="joint_item">{$post.class} класс</span> 
+
+      </div>
+    </div>   

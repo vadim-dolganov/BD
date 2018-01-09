@@ -1,0 +1,20 @@
+<?php
+    define('DB_HOST', "localhost");
+    define('DB_USER', "co35515_reshnew");
+    define('DB_PASS', "vadimiz12rus");
+    define('DB_NAME', "co35515_reshnew");
+    define('ROOT_PATH', dirname( dirname(__FILE__) . "../"));
+    define('ROOT_DIR', $_SERVER['DOCUMENT_ROOT']);
+    define('TEMPLATE_DIR', ROOT_DIR."/template/");
+    define('COMPILE_DIR', ROOT_DIR."/lib/templates_c/");
+    define('CLIENT_ID', '5579528');
+    define('CLIENT_SECRET', 'BATkumtqaM6RDT4gUVY0');
+    define('REDIRECT_URI', 'http://reshuvsem.ru/handler/vk_auth.php');
+    define('URL_OAUTH_VK',  'http://oauth.vk.com/authorize');
+    define('AMOUNT_DATA_ON_PAGE',  '20');
+    define('AMOUNT_DATA_ON_RIGHT_BLOCK',  '5');
+    define('ROOT_PAGE',  'http://reshuvsem.ru/');
+    define('TARGET_IMG_ANSWER_PATH',  '../upload/answer/'); 
+    define('IMG_QUESTION_PATH',  '../upload/question/'); 
+    define('PATH_IMG_AVATAR',  '../upload/avatar/'); 
+    define('INITIAL_POINT', "20");

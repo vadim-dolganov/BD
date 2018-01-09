@@ -1,0 +1,20 @@
+<div class="user_profil">            
+  <div  class="user_img fl_left">              
+    <img  src="/upload/avatar/{$user.avatar}">              
+  </div>            
+  <div style="float: left;">  
+    <h1>{$user.name} {$user.last_name}</h1>
+    <div>
+      <img src="/img/points-icon.png" class="points_icon fl_left">
+      <span class="text_points">{$user.points}</span>
+      <div style="clear: both;"></div>
+    </div>
+    {if $user.user_id == $smarty.session.user.user_id}
+    <div style="font-size: 11px;">                             
+      <a href="/user/settings.php" style="color: #168de2;">Настройки</a> |                
+      <a href="../user/exit.php" style="color: #168de2;">Выход</a>              
+    </div>  
+    {/if}
+  </div>              
+  <div style="clear:both"></div>
+</div> 

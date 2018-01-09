@@ -1,0 +1,55 @@
+<div class="answer_task">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- reshu -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8651795027530742"
+     data-ad-slot="1198334712"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  <h2>ОТВЕТЫ</h2>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- большой для reshuvsem -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:100px"
+     data-ad-client="ca-pub-8651795027530742"
+     data-ad-slot="1272812712"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  <div id="content_answer">
+  {section name=i loop=$answer|@count} 
+    <div class="answer_item">
+      <div style="float: left; margin-right: 15px;">
+        <img class="img-avatar" style="display: inline-block;" src="/upload/avatar/{$answer[i].avatar}"><br>
+        <a href="/id{$answer[i].user_id}">
+          <span class="autor" style="display: block;text-align: center;">{$answer[i].name}</span>
+        </a>
+      </div>
+      <p class="answer_text">{$answer[i].answer_text}</p><br>  
+      {if $answer[i].image}              
+        <a href="/upload/answer/{$answer[i].image}">
+          <img src="/upload/answer/{$answer[i].image}" style="max-width: 67%; max-height:500px; margin-top: 15px;">
+        </a>  
+      {/if}             
+       <div style="clear: both"></div>            
+    </div>                    
+    <div style="background-color: #40a5ed; height: 1px;"></div>
+    {/section}
+    {if $answer|@count == 0}
+      <p class="answerIsNo">На эту задачу, еще нет ответа!</p>
+    {/if}               
+   
+  </div>
+</div>
+<div class="new_answer">
+  <div class="title_new_answer_block"><span>Новые задачи</span></div>
+  {section name=i loop=$userAnswer|@count} 
+    <div><p>{$userAnswer[i].task_text|mb_substr:0:150 } <a href="/task.php?id={$userAnswer[i].task_id}" style="color: #40a5ed;">Перейти</a></p></div>
+  {/section}
+</div>
+</div>
+                  
+                  

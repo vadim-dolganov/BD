@@ -1,0 +1,915 @@
+@font-face {
+    font-family: Hel-Light; /* Имя шрифта */
+    src: url(/font/helveticaneuecyr-light.otf); /* Путь к файлу со шрифтом */
+   }
+body, ul{
+    margin: 0;
+    padding: 0;
+}
+
+.right_block_content li
+{
+    display: inline-block;
+    margin-right: 10px;
+}
+.menu_top ul
+{
+    height: 50px;
+}
+.menu_top  .fl_right
+{
+    float: right;
+}
+.fl_right
+{
+    float: right;
+}
+.fl_left
+{
+    float: left;
+}
+.const_font
+{
+    font-family: Hel-Light;
+    color: #666;
+    font-weight: 600;
+}
+
+html,
+body 
+{
+    height: 100%;
+    background-image: url(http://reshuvsem.ru/img/header.png);
+}
+.wrap {
+    min-height: 100%;
+    position: relative;
+    [rel="main"] {
+        padding-bottom: 100px;
+    }
+    .footer_cuddled {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        left: 0;
+        bottom: 0;
+    }
+}
+/* HEADER*/
+
+.header
+{
+    width: 100%;
+    background-color: #168de2;
+    box-shadow: 0 4px 29px -4px #666;
+    background-origin: border-box;
+    background-image: url(http://reshuvsem.ru/img/header.png);
+}
+.nav
+{
+    max-width: 1200px;
+    padding: 0 35px;
+    height: 50px;
+    margin: 0 auto;
+  
+}
+.logo{
+    float: left;
+    width: 20%;
+    height: 50px;
+    text-align: center;
+}
+a{
+  text-decoration: none;
+    font-family: Roboto,Arial;
+}
+.logo a{
+      font-size: 28px;
+    color: white;
+    line-height: 49px;
+}
+
+
+.menu_top
+{
+  
+         width: 73%;
+    float: left;
+  height: 50px;
+}
+.text_li
+{
+      font-size: 16px;
+    color: white;
+    line-height: 50px;
+    font-family: Hel-Light;
+}
+.menu_top li 
+{
+    float: left;
+  height: 50px;
+list-style-type: none;
+  padding: 0px 10px 0px 10px;
+}
+.menu_top li:hover
+{
+    background-color: #147fcb;
+      cursor: pointer;
+}
+.plus
+{
+  
+    font-weight: 900;
+    font-size: 21px;
+    margin-right: 4px;
+    float: left;
+    margin-top: -3px;
+
+}
+/* HEADER */
+/* CONTENT */
+.content
+{
+    width: 100%;
+    max-width: 955px;
+    margin: 45px auto;
+}
+.left_block_content
+{
+  width: 705px;
+    float: left;
+}
+.right_block_content
+{
+    width: 220px;
+    float: right;
+    margin-top: -10px;
+}
+.right_block_content h3
+{
+    padding: 0 10px;
+    line-height: 37px;
+    color: white;
+    font-size: 18px;
+    font-family: Hel-Light;
+    margin-top: 10px;
+}
+
+
+.avatar 
+{
+    float: left;
+}
+.img-avatar {
+  
+    width: 50px;
+    height: 50px;
+    padding: 1px;
+    border-radius: 50%;
+    border: 1px solid#CCC;
+}
+.text_task {
+    color: #555;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    border: 1px solid#e9e9e9;
+    line-height: none;
+    min-height: 80px;
+    padding: 10px;
+    margin-left: 70px;
+}
+.text_task p
+{
+    margin: 8px auto 15px;
+    font-family: Hel-Light;
+    color: #666;
+    white-space: pre-wrap;
+}
+.pointer {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #e9e9e9;
+    margin-top: -15px;
+    margin-left: -21px;
+}
+.min_task
+{
+  margin-bottom: 20px;
+}
+.joint_item
+{
+    background-color: #8ca9cf;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 2px 4px;
+    font-size: 12px;
+    font-family: Hel-Light;
+    line-height: 14px;
+    color: #fff;
+    text-shadow: 0 0 1px rgba(0,0,0,0.25);
+}
+.answer
+{
+    background: #8ca9cf url(../img/okotvet.png) 1px 1px no-repeat;
+    width: 63px;
+    padding: 2px 2px;
+    padding-left: 20px;
+}
+.autor
+{
+    font-family: Hel-Light;
+    color: #f2a83a;
+    font-weight: bold;
+}
+
+/* CONTENT */
+/* SIGN VK */
+  .link {color:#fff; text-decoration:none}
+    .link:hover {color:#fff; text-decoration:underline}  
+#mask {
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:9000;
+    background-color:#000;
+    display:none;
+    }
+#boxes .window {
+    position:fixed ;
+    left:0;
+    top:0px;
+    -top: 40px;
+    width:440px;
+    height:200px;
+    display:none;
+    z-index:9999;
+    padding: 20px;
+    overflow: hidden;
+    }  
+#boxes #dialog {
+    width: 260px;
+    height:203px;
+    padding:10px;
+    }  
+.top {
+    position:absolute;
+    left:0;
+    top:0;
+    width:370px;
+    height:30px;
+    background: #0085cc;
+    padding: 8px 20px 6px 10px;
+    }
+.close {
+    float:right;
+    }
+.content {
+    padding-top: 35px;
+}
+#boxes p{
+    color: white;
+    margin: 0 0 15px;
+    font-weight: bold;
+    text-transform: none;
+    font-family: Hel-Light,Helvetica,Arial,sans-serif;
+    font-size: 21px;
+}
+.vk
+{
+    color: #6d8cb0;
+    display: block;
+    font-size: 35px;
+    margin: 20px 0;
+}
+.vk_img
+{
+    max-width: 100%; 
+    height: auto; 
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+    vertical-align: middle;
+}
+/* SIGN VK */
+.switch
+{
+      padding: 5px 8px;
+}
+
+.answer_task
+{
+    margin-top: 60px;
+}
+.block_content .answer_task, h2
+{
+      background: #40a5ed;
+    padding: 0 10px;
+    line-height: 37px;
+    color: white;
+    font-size: 18px;
+    border-radius: 2px;
+    font-family: Hel-Light;
+    margin-bottom: 5px;
+}
+
+.user_avatar
+{
+   
+    width: 45px;
+    height: 45px;
+    padding: 1px;
+    border-radius: 50%;
+    border: 1px solid#CCC;
+}
+
+.indents
+{
+    margin-right: 15px;
+}
+
+.answer_item
+{
+    margin-top: 30px;
+    margin-bottom: 17px;
+}
+
+.right_block_link
+{
+    color: #999;
+    font-size: 13px;
+}
+
+.last_text_question
+{
+    font-family: Hel-Light;
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.title_block
+{
+    border-radius: 4px;
+    background: url('/img/block_title.png') center center no-repeat;
+}
+
+.footer
+{
+    background: none repeat 0 0 #168de2;
+    margin-top: 50px;
+    box-shadow: 0 4px 52px -4px #666;
+}
+
+.footer p 
+{
+    font-family: Hel-Light;
+    color: #ffffff;
+    margin: 0 auto;
+    padding: 5px 0px 5px 0;
+    text-align: center;
+}
+
+.user_spoiler_body
+{
+    display: none;
+    width: 160px;
+}
+
+.user_spoiler_body a
+{
+    font-size: 15px;
+    color: white;
+    line-height: 24px;
+    font-family: Hel-Light;
+    font-weight: 600;
+    display: block;
+}
+
+.add_answer
+{
+    margin-top: 30px;
+}
+
+.add_answer a
+{
+    display: block;
+    background: #40a5ed url(../img/pens.png) 8px 7px no-repeat;
+    padding: 5px 10px 8px 10px;
+    padding-left: 34px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 auto;
+    width: 125px;
+    color: white;
+}
+
+.fileform {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 26px;
+    overflow: hidden;
+    padding: 2px;
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    width: 230px;
+}
+
+.fileform #fileformlabel {
+    background-color: #FFFFFF;
+    float: left;
+    height: 22px;
+    font-family: Hel-Light;
+    font-weight: 600;
+    line-height: 22px;
+    overflow: hidden;
+    padding: 2px;
+    text-align: left;
+    vertical-align: middle;
+    width: 160px;
+}
+
+.fileform .selectbutton {
+    background-color: #8ca9cf;
+    border: 1px solid #8ca9cf;
+    border-radius: 2px;
+    color: #FFFFFF;
+    float: right;
+    font-size: 16px;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 2px 6px;
+    text-align: center;
+    vertical-align: middle;
+    width: 50px;
+}
+
+.fileform #image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -moz-opacity: 0;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    font-size: 150px;
+    height: 30px;
+    z-index: 20;
+}
+
+.add_answer div.spoiler_body
+{
+    /* width: 400px; */
+    max-width: 50%;
+    margin: 10px auto;
+}
+
+form p, .file_label_p
+{
+    font-family: Hel-Light;
+    color: #666;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.answerIsNo
+{
+    font-family: Hel-Light;
+    color: #666;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#status
+{
+    font-family: Hel-Light;
+    color: #666;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.buttonOnClick
+{
+    font-family: Hel-Light;
+    cursor: pointer;
+    border: none;
+    color: white;
+    margin-top: 10px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 3px;
+    background: #8ca9cf;
+}
+
+h1
+{
+    font-family: Hel-Light;
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.link_image
+{
+    display: block;
+}
+
+.attach_image_task
+{
+    max-width: 380px;
+    max-height: 400px;
+    margin: 0 auto;
+    display: block;
+}
+
+.form_question
+{
+    margin: 0 auto;
+    width: 550px;
+    max-width: 80%;
+}
+.text_area_question
+{
+    color: rgb(102, 102, 102);
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 3px;
+    width: 100%;
+    max-width: 550px;
+    max-height: 300px;
+    margin-top: 15px;
+    height: 240px;
+}
+
+.select_form
+{
+    margin-right: 15px;
+    color: #333;
+    border: 1px solid#ccc;
+    height: 24px;
+    font-size: 14px;
+    width: 140px;
+}
+
+.user_profil
+{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.user_img
+{
+    margin-right: 20px;
+    width: 25%;
+}
+
+.user_img img
+{
+    padding: 1px;
+    max-width: 100%;
+    border: 1px solid#CCC;
+}
+.user_profil h1
+{
+    text-align: left;
+    margin-bottom: 15px;
+    display: block;
+    font-size: 20px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+.user_profil h2
+{
+    margin-bottom: 20px;
+    text-align: center;
+}
+  
+#form_id textarea
+{
+    color: #666;
+    border: 1px solid#CCC;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.answer_text
+{
+    white-space: pre-wrap;
+    max-width: 70%;
+    font-family: Hel-Light;
+    display: inline;
+    float: left;
+    color: #666;
+    margin: 0;
+}
+
+.settingName, .settingLastName
+{
+    margin-top: 8px;
+    height: 16px;
+    max-width: 72%;
+    padding: 4px 6px;
+    border: 1px solid #ddd;
+    color: #444;
+    border-radius: 4px;
+}
+.subject
+{
+    margin-bottom: 40px;
+}
+
+.subject ul
+{
+    list-style-type: none;
+}
+
+.subject li
+{
+    display: block;
+}
+
+.subject_item
+{
+    background-color: #f9f9f9;
+    padding: 2px 10px 2px;
+    border-radius: 3px;
+    border: 1px solid#e9e9e9;
+}
+
+.subject_item span
+{
+    font-family: Hel-Light;
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+}
+.add-task-btn
+{
+    text-align: center;
+    border: 3px dashed #4b9fcc;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.commentBlock{
+  width:500px;
+  margin: 10px auto;
+  border-bottom:1px solid #999;
+}
+.name{
+  font-weight:700;
+}
+#load{
+  width:150px;
+  font-family: Hel-Light;
+  text-align:center;
+  margin: 10px auto;
+}
+#load div{
+   margin: 5px;
+   cursor:pointer;
+   background: #6483aa;
+   color:#fff;
+   padding: 4px 10px 4px 10px;
+   border:1px solid #2f4561;
+   -webkit-border-radius: 2px;
+   -moz-border-radius: 2px;
+   border-radius: 2px;
+}
+.button1
+{
+    background: #59bdf0 url(/img/adds.png) 6px 14px no-repeat;
+    width: 189px;
+    height: 25px;
+    background-size: 12px;
+    display: inline-block;
+    padding: 10px 0px 6px 0px;
+        color: red;
+    font-weight: bolder;
+    border-radius: 3px;
+    font-family: Hel-Light;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.lasts_question span 
+{
+    color: #999;
+    font-family: Roboto,Arial;
+    font-size: 13px;
+}
+
+/*Share Begin*/
+.share
+{
+    width: 141px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+.service_facebook
+{
+    background-image: url(https://yastatic.net/share2/v-1.13.1/png/6e499ec673690f8ce38000d6e3910a1b.png);
+    background-color: #3b5998;
+}
+.service_twitter 
+{
+    background-image: url(https://yastatic.net/share2/v-1.13.1/png/90b4b34825dd269b61ac35ebd478f1cd.png);
+    background-color: #00aced;
+}
+.service_odnoklassniki 
+{
+    background-image: url(https://yastatic.net/share2/v-1.13.1/png/bf146c9b625d96aae779be09176605f0.png);
+    background-color: #eb722e;
+}
+.service_moimir 
+{
+    background-image: url(https://yastatic.net/share2/v-1.13.1/png/a60ea5f5225188d8d4da7df3467d1622.png);
+    background-color: #168de2;
+}
+
+.service_vk
+{
+    background-image: url(https://yastatic.net/share2/v-1.13.1/png/e3146797c0f01cc18d47ff9f50ffe4d2.png);
+    background-color: #48729e;
+}
+
+.share_const
+{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    border-radius: 2px;
+}
+/*Share End*/
+
+.article h3
+{
+    font-family: Hel-Light;
+    font-weight: 600;
+    font-size: 15pt;
+    color: #168de2;
+    margin-bottom: 20px;
+}
+
+.argument
+{
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid#e9e9e9;
+}
+
+.argument p
+{
+    font-family: Hel-Light;
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.new_answer
+{
+    margin-top: 30px;
+}
+
+.title_new_answer_block
+{
+    background: #40a5ed;
+    padding: 0 10px;
+    line-height: 37px;
+    color: white;
+    font-size: 18px;
+    border-radius: 2px;
+    font-family: Hel-Light;
+    margin-bottom: 5px;
+}
+
+.new_answer p
+{
+      font-family: Hel-Light;
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.points_icon
+{
+    width: 40px;
+    margin-top: 10px;
+}
+
+.text_points
+{
+    font-family: Hel-Light;
+    font-size: 25px;
+    font-weight: 600;
+    color: #168de2;
+    margin-top: 15px;
+    margin-left: 15px;
+    float: left;
+}
+
+.spoiler_body strong
+{
+    font-family: Hel-Light;
+    color: #666;
+    font-size: 14px;
+}
+.count-user
+{
+    font-family: Hel-Light;
+    /* color: #666; */
+    font-weight: 600;
+    /* margin: 0 auto; */
+    display: block;
+    text-align: center;
+}
+
+@media screen and (min-width:80px) and (max-width: 920px) 
+{
+    .menu_item
+    {
+        display: none;
+    }
+    .lasts_question
+    {  
+        display: none;
+    
+    }
+    .menu_top
+    {
+        width: 17%;
+        float: right;
+    }
+  
+    .left_block_content
+    {
+        width: 100%;
+    }
+    .attach_image_task
+    {
+        max-width: 100%;
+    }
+    .select_form
+    {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .right_block_content
+    {
+        width: 100%;
+        display: table-header-group;
+        float: none;
+    }  
+    .content
+    {
+        display: table;
+    }
+    .left_block_content
+    {
+        display: table-footer-group;
+        float: none;
+    }
+    .subject
+    {
+        display: none;
+    }
+    .add-task-btn
+    {
+        margin: 10px auto;
+        width: 72%;
+    }
+    .content 
+    {
+        padding-top: 0;
+        margin-top: 10px;
+    }
+  
+    .text_task span.answer, span.date
+    {
+        display: none;
+    }
+    /*.block_content
+    {
+        margin: 0 auto;
+        width: 319px;
+    }*/
+    
+}

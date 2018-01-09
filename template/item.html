@@ -1,0 +1,70 @@
+
+<div class="content">
+  <h1 style="font-size: 15pt; margin-top:0px;">Добавленные задачи</h1>
+  <div class="left_block_content">
+    {section name=i loop=$array|@count}   
+      <div class="min_task">
+        <img class="img-avatar avatar" src="/upload/avatar/{$array[i].avatar}" alt="Добавил {$array[i].name}">
+        <div class="text_task">
+          <div>
+            <a href="/id{$array[i].user_id}"><span class="autor">{$array[i].name}</span></a>
+            <span class="date joint_item fl_right">{$array[i].date}</span>
+          </div>
+          <i class="pointer"></i>
+          <a href="/task.php?id={$array[i].task_id}"><p>{$array[i].task_text|mb_substr:0:150}...</p></a>
+          {if $array[i].image }
+            <a href="/upload/question/{$array[i].image}" class="link_image">
+              <img src="/upload/question/{$array[i].image}" class="attach_image_task">
+            </a><br>
+          {/if}
+          <span class="joint_item">{$array[i].item}</span>
+          <span class="joint_item">{$array[i].class} класс</span>
+          {if $array[i].answer_id}
+            <span class="joint_item answer fl_right">Есть ответ</span>  
+          {/if}
+        </div>
+      </div>  
+    {/section}
+    <div>
+      {if $smarty.server.PHP_SELF == '/subject.php'}
+        {if $page != 1} 
+            <a href="/subject/{$subject}/1" class="joint_item">Начало</a>
+        {/if}
+      
+        {if $page - 1 > 0} 
+            <a href="/subject/{$subject}/{$page-1}">{$page - 1}</a> | 
+        {/if}
+      
+        {if $page > 0} 
+          <a href="/subject/{$subject}/{$page}" class="joint_item">{$page}</a> | 
+        {/if}
+
+        {if $page  +1<= $total} 
+          <a href="/subject/{$subject}/{$page+1}">{$page+1}</a> | 
+        {/if} 
+        {if $page != $total}
+          <a href="/subject/{$subject}/{$total}" class="joint_item">Конец</a>
+        {/if}
+      {else} 
+        {if $page != 1} 
+            <a href="/page/1" class="joint_item">Начало</a>
+        {/if}
+      
+        {if $page - 1 > 0} 
+            <a href="/page/{$page - 1}">{$page - 1}</a> | 
+        {/if}
+      
+        {if $page > 0} 
+          <a href="/page/{$page }" class="joint_item">{$page}</a> | 
+        {/if}
+
+        {if $page  +1<= $total} 
+          <a href="/page/{$page+1}">{$page+1}</a> | 
+        {/if} 
+        {if $page != $total}
+          <a href="/page/{$total}" class="joint_item">Конец</a>
+        {/if}
+      {/if}
+    </div>
+  </div>
+        

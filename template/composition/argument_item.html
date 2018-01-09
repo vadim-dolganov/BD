@@ -1,0 +1,15 @@
+<div class="content">
+  <div class="left_block_content">
+    <h1 style="font-size: 15pt; margin-top:0px;">Аргументы к сочинению ЕГЭ по русскому языку (C1)</h1>
+    <div class="block_content">
+    {section name=i loop=$argument|@count}   
+      <div class="article">
+        <div> 
+          <a href="argument.php?problem={$argument[i].argument_id}">
+            <h3>{$argument[i].problem}</h3>  
+          </a>
+        </div>
+      </div>  
+    {/section}
+    </div>
+  </div>

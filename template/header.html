@@ -1,0 +1,29 @@
+  <body class="main_body">
+   <div class="wrap">
+    <div class="header">
+      <div class="nav">
+        <div class="logo"><a href="/">Решу<span style="color: #f2a83a;">Всем</span></a></div>
+        <div class="menu_top"> 
+          <ul>
+            <li class="menu_item">
+              <a href="/addquestion" class="text_li"><span class="plus">+</span>Задать вопрос</a>
+            </li>
+            <li class="fl_right">
+              {if isset($smarty.session.user)}
+                <a class="avatar user_links" href="" style="padding-right: 10px;">
+                  <img class="user_avatar" src="/upload/avatar/{$smarty.session.user.photo_big}">
+                </a>
+                <div class="user_spoiler_body">
+                  <a href="/id{$smarty.session.user.user_id}">Моя страница</a>
+                  <a href="/user/exit.php">Выход</a>
+                </div> 
+              {else}
+                <span id="modal" class="text_li">Вход</span>
+              {/if}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div></div>
+    </div>
+    

@@ -1,0 +1,97 @@
+<?php /* Smarty version Smarty-3.1.7, created on 2017-09-27 22:54:33
+         compiled from "/home/c/co35515/co355/public_html/template/form_add_question.html" */ ?>
+<?php /*%%SmartyHeaderCode:139556965457757ce719b524-32307010%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '3529a73232eb63d214d96f3d31d10a438f37eff2' => 
+    array (
+      0 => '/home/c/co35515/co355/public_html/template/form_add_question.html',
+      1 => 1506542073,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '139556965457757ce719b524-32307010',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.7',
+  'unifunc' => 'content_57757ce71dd9e',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_57757ce71dd9e')) {function content_57757ce71dd9e($_smarty_tpl) {?><?php if (isset($_SESSION['user'])){?>
+  <div style="margin-top: 60px;">
+    <h1>Задать вопрос</h1>              
+    <form method="post" action="/handler/add_question.php" enctype="multipart/form-data"  class="form_question" id="forma" name="questionForma">               
+      <select name="class" class="select_form" onChange="checkParams()" id="class_select">                 
+        <option value="">Выберите класс</option>                 
+        <option value="1">1 класс</option>                 
+        <option value="2">2 класс</option>                 
+        <option value="3">3 класс</option>                  
+        <option value="4">4 класс</option>                 
+        <option value="5">5 класс</option>                 
+        <option value="6">6 класс</option>                 
+        <option value="7">7 класс</option>                 
+        <option value="8">8 класс</option>                  
+        <option value="9">9 класс</option>                  
+        <option value="10">10 класс</option>                 
+        <option value="11">11 класс</option>                
+      </select>    
+      <select name="points" class="select_form" onChange="checkParams()" id="points_select">                
+        <option value="">Баллы</option>                 
+        <option value="10">10</option>                 
+        <option value="15">15</option>                 
+        <option value="20">20</option>                  
+        <option value="25">25</option>                 
+        <option value="30">30</option>                              
+      </select> 
+      <select name="predmet" class="select_form" id="predmet_select" onChange="checkParams()" >                 
+        <option value="">Предмет</option>                  
+        <option value="1">Математика</option>                  
+        <option value="2">Алгебра</option>                  
+        <option value="3">Геометрия</option>                  
+        <option value="4">Физика</option>                  
+        <option value="5">Русский язык</option>                  
+        <option value="6">Информатика</option> 
+        <option value="7">Химия</option> 
+      </select>                
+      <textarea id="checkText" onkeyup="checkParams()"  name="text" rows="14" class="text_area_question" placeholder="Введите текст задания (вопроса)"></textarea>                 
+      <input name="postid" type="hidden" value="">               
+      <p>Добавить картинку:</p>               
+      <div class="fileform">                  
+        <div id="fileformlabel"></div>                  
+        <div class="selectbutton">Обзор</div>                  
+        <input id="image" type="file" name="image" onchange="getName(this.value);">                  
+        <input type="hidden" name="MAX_FILE_SIZE" value="100000">                
+      </div>	                  	                              
+      <input type="submit" value="Отправить" class="buttonOnClick" id="submitDisabled" disabled>              
+    </form>            
+</div>
+<?php }else{ ?>
+
+  <div style="margin-top: 200px;"> 
+    <h1>Задать вопрос</h1>
+    <p class="answerIsNo">Задать вопрос, могут только Авторизированные пользователи.</p>
+    <p class="answerIsNo">(Регистрация займет 15 секунд)</p>
+    <a style="width: 96px;     border: 0;
+    border-radius: 2px;    color: #fff;font-size: 12px;
+    text-align: center;     background: #45668e!important; padding: 10px 15px;display: block;
+    margin: 10px auto;" href="http://oauth.vk.com/authorize?client_id=5579528&redirect_uri=http://reshuvsem.ru/handler/vk_auth.php&response_type=code">
+    
+    <div style="
+        float: left;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 0px;
+">Войти через</div>
+    <img style="
+   width: 24px;
+    float: right;" src="/img/logoVK.png">
+      <div style="
+    clear: both;
+"></div>
+    </a>
+    
+    <!-- <a href="http://oauth.vk.com/authorize?client_id=5579528&redirect_uri=http://reshuvsem.ru/handler/vk_auth.php&response_type=code" title="Регистрация"><p class="answerIsNo"  style="color:#168de2;">Быстрое регистрация через VK.</p></a> -->
+  </div>
+<?php }?><?php }} ?>

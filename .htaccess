@@ -1,0 +1,14 @@
+DirectoryIndex index.php
+RewriteEngine On
+RewriteBase /
+
+ 
+RewriteRule ^page/([^/]*)$ /?page=$1 [L]
+RewriteRule ^addquestion$ /addtask.php [L]
+RewriteRule ^user/settings$ /user/settings.php [L]
+RewriteRule ^id([^/]*)$ /user.php?id=$1 [L]
+RewriteRule ^subject/([^/]*)/([^/]*)$ /subject.php?subject=$1&page=$2 [L]
+
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$
+RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
